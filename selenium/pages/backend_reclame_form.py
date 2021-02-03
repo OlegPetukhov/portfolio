@@ -31,7 +31,7 @@ class BackendReclameForm(BasePage):
         assert rows[8].text == data['cost'], f"Backend_reclame_form: поле Стоимость услуги некорректно: {rows[8].text}"
         assert rows[9].text == 'заявка подана', "Backend_reclame_form: поле Статус некорректно"
         assert rows[10].text == '(не задано)', "Backend_reclame_form: поле Дата модерации некорректно"
-        if data['type'] == 'Backend_reclame_form: Изображение':
+        if data['type'] == 'Изображение':
             assert self.is_element_present(*Locator.FORM_INFO_IMG), "Backend_reclame_form: Изображение отсутствует"
 
     def get_status_reclame(self):
